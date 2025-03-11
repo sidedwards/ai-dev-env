@@ -1,0 +1,34 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true
+  },
+  "markdown.extension.mermaid.light.background": "#ffffff",
+  "markdown.extension.mermaid.dark.background": "#2D2D2D",
+  "markdown.extension.mermaid.theme": "default",
+  "markdown.preview.mermaid.theme": "default",
+  "workbench.colorTheme": "Cursor Dark",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 24,
+  "editor.rulers": [80, 120],
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "cursor.chat.openForTelemetry": false,
+  "cursor.ai.model": "claude-3-haiku",
+  "cursor.aiBadges": true
+}

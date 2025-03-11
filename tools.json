@@ -1,0 +1,72 @@
+{
+    "ides": [
+      {
+        "name": "VS Code",
+        "command": "code",
+        "install": {
+          "darwin": "brew install --cask visual-studio-code",
+          "windows": "winget install Microsoft.VisualStudioCode",
+          "linux": "sudo snap install code --classic"
+        }
+      },
+      {
+        "name": "Cursor",
+        "command": "cursor",
+        "install": {
+          "darwin": "brew install --cask cursor",
+          "windows": "winget install Cursor",
+          "linux": "echo Please download from https://cursor.sh/"
+        }
+      }
+    ],
+    "extensions": [
+      {
+        "name": "GitHub Copilot",
+        "id": "github.copilot"
+      },
+      {
+        "name": "GitHub Copilot Chat",
+        "id": "github.copilot-chat"
+      },
+      {
+        "name": "GitHub Pull Requests",
+        "id": "github.vscode-pull-request-github"
+      },
+      {
+        "name": "Mermaid Markdown Syntax Highlighting",
+        "id": "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
+      },
+      {
+        "name": "Markdown Preview Mermaid Support",
+        "id": "bierner.markdown-mermaid"
+      },
+      {
+        "name": "Cline",
+        "id": "cline.cline"
+      }
+    ],
+    "apps": [
+      {
+        "name": "Grok",
+        "displayName": "Grok",
+        "type": "pake",
+        "url": "https://grok.x.ai/",
+        "install": {
+          "darwin": "npm install -g @pake/cli@latest && pake https://grok.x.ai/ --name Grok --width 1200 --height 800",
+          "win32": "npm install -g @pake/cli@latest && pake https://grok.x.ai/ --name Grok --width 1200 --height 800",
+          "linux": "npm install -g @pake/cli@latest && pake https://grok.x.ai/ --name Grok --width 1200 --height 800"
+        }
+      },
+      {
+        "name": "Semantic Chat",
+        "displayName": "SemanticChat",
+        "type": "pake",
+        "url": "https://chat.semantic.dev",
+        "install": {
+          "darwin": "npm install -g @pake/cli@latest && pake https://chat.semantic.dev --name SemanticChat --width 1200 --height 800",
+          "win32": "npm install -g @pake/cli@latest && pake https://chat.semantic.dev --name SemanticChat --width 1200 --height 800",
+          "linux": "npm install -g @pake/cli@latest && pake https://chat.semantic.dev --name SemanticChat --width 1200 --height 800"
+        }
+      }
+    ]
+  }
