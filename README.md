@@ -17,18 +17,13 @@ This script helps you set up a development environment optimized for AI-assisted
   - Semantic Chat (https://chat.semantic.dev/)
 - Optimized IDE settings for AI pair programming
 - Cross-platform support (macOS, Windows, Linux)
-- Smart favicon extraction for desktop apps
-- One-stop setup for a cutting-edge development environment
-- Comprehensive installation of IDEs, extensions, and tools
-- Applications are wrapped as native desktop apps with Pake
-- Streamlined configuration for consistent development across machines
+- Debug logging for troubleshooting
+- Non-interactive mode for automation and scripting
 
 ## Prerequisites
 
 - Deno runtime (https://deno.land/#installation)
 - Node.js and npm (for Pake installation)
-- Internet connection
-- Administrative access (for installations)
 
 ## Usage
 
@@ -42,6 +37,25 @@ deno run --allow-read --allow-write --allow-run --allow-env --allow-net setup.ts
 
 4. Follow the interactive prompts to select your IDE, extensions, and tools
 
+### Command-line Options
+
+- `--debug` or `-d`: Enable debug logging for detailed operation information
+- `--non-interactive` or `-n`: Run in non-interactive mode (skips prompts, uses default selections)
+- `--help` or `-h`: Show help information
+- `--version` or `-V`: Show version information
+
+Example with debug logging:
+
+```bash
+deno run --allow-read --allow-write --allow-run --allow-env --allow-net setup.ts --debug
+```
+
+Example in non-interactive mode:
+
+```bash
+deno run --allow-read --allow-write --allow-run --allow-env --allow-net setup.ts --non-interactive
+```
+
 ## Configuration
 
 The `tools.json` file contains all the configuration for available tools, extensions, and their installation commands. You can modify this file to add or remove tools as needed.
@@ -52,32 +66,6 @@ The script will apply optimized settings for your chosen IDE from the `config` d
 
 - VS Code: `config/vscode-settings.json`
 - Cursor: `config/cursor-settings.json`
-
-## About Pake
-
-This script uses [Pake](https://github.com/tw93/Pake) to transform web applications into desktop apps. Pake is a powerful tool that:
-
-- Creates lightweight desktop applications (2-3MB) from any web URL
-- Uses Tauri (Rust) under the hood for security and performance
-- Provides a native-like experience with features like notifications and keyboard shortcuts
-- Works on Windows, macOS, and Linux
-
-When you choose to install Grok or Semantic Chat, the script will:
-1. Install the Pake CLI tool globally (if not already installed)
-2. Automatically extract and cache the website's favicon:
-   - Parses the HTML to find the correct icon links
-   - Tries multiple favicon sources and formats
-   - Falls back to common favicon locations if needed
-   - Uses Google's favicon service as a last resort
-3. Create a desktop application with the proper icon
-4. Place the app in your system's applications folder
-
-The favicon detection system will:
-- Extract icons from `<link>` tags in the HTML
-- Prioritize ICO and high-quality PNG formats
-- Convert relative paths to absolute URLs
-- Cache icons locally to avoid re-downloading
-- Provide intelligent fallbacks if no icon is found
 
 ## How It Works
 
